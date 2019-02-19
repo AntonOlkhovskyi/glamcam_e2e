@@ -14,4 +14,4 @@ jobs:
      script: true
      install: npm install
    - stage: e2e
-     script: npm run e2e:CI
+     script: npm run e2e

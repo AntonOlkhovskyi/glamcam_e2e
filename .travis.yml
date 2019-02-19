@@ -1,0 +1,17 @@
+sudo: false 
+language: node_js
+node_js: 8.8.1
+stages:
+- name: Precache
+- name: e2e
+cache:
+ directories:
+   - node_modules
+jobs:
+   fast_finish: true
+   include:
+   - stage: Precache
+     script: true
+     install: npm install
+   - stage: e2e
+     script: npm run e2e:CI
